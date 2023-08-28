@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { CoffeeDirective } from './coffee.directive';
+import { SpongebobPipe } from './spongebob.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CoffeeDirective } from './coffee.directive';
     DeuxiemeComponentComponent,
     HighlightDirective,
     MoviesListComponent,
-    CoffeeDirective
+    CoffeeDirective,
+    SpongebobPipe
   ],
   imports: [
     BrowserModule,
