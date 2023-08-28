@@ -10,7 +10,7 @@
 </button>
 
 <div *ngFor="let movie of movies; even as IsEven; index as index">
-    <h3 [class.banane]="IsEven">
+    <h3 [class.banane]="IsEven" appHighlight>
         {{index}} . {{ movie.titre}}
     </h3>
     <p>

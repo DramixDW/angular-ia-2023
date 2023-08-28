@@ -1,0 +1,20 @@
+<div *ngFor="let movie of movies">  
+    <div>
+        <h3>
+            {{movie.titre}}
+        </h3>
+        <button type="button" (click)="incrementLikeCount(movie)">
+            +
+        </button>
+        <span>{{movie.likeCount}}</span>
+        <button type="button" (click)="decrementLikeCount(movie)">
+            -
+        </button>
+    </div>
+    <p>
+       {{movie.description}} 
+    </p>
+</div>
+
+<p appCoffee> 
+</p>
