@@ -1,0 +1,38 @@
+<p class="banane">deuxieme-component works!</p>
+
+<!--  avec ngIf, ma balise sera ou ne sera pas affiché dans mon html
+      dépendant de la valeur qui est lié à notre ngIf -->
+<p *ngIf="isVisible">
+    Ce texte est caché.
+</p>
+<button type="button" (click)="toggleVisibility()">
+    {{ buttonText }}
+</button>
+
+<div *ngFor="let movie of movies; even as IsEven; index as index">
+    <h3 [class.banane]="IsEven">
+        {{index}} . {{ movie.titre}}
+    </h3>
+    <p>
+        {{ movie.description }}
+    </p>
+</div>
+
+
+<button type="button" (click)="mode = 'list'">
+    Activer la vue liste
+</button>
+<button type="button" (click)="mode = 'card'">
+    Activer la vue carte
+</button>
+<div [ngSwitch]="mode">
+    <p *ngSwitchCase="'list'">
+        List View
+    </p>
+    <p *ngSwitchCase="'card'">
+        Card View
+    </p>
+    <p *ngSwitchDefault="">
+        Default View
+    </p>
+</div>

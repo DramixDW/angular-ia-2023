@@ -1,0 +1,19 @@
+<p class="{{classBanane}}">{{ title }}</p>
+<!-- la class read viendra se rajouter à la liste
+de mes classes si la propriété isRead renvoie une
+valeur truthy(true, chaines de caractères non vide,etc..)-->
+<p [class]="classBanane" [class.read]="isRead">
+    mon deuxième paragraphe
+    <button type="button" (click)="isReadToggle()">
+        Toggle Read
+    </button>
+</p>
+
+<input type="text" [(ngModel)]="inputValue" (keyup.enter)="isReadToggle()" />
+{{ inputValue }}
+
+<h2>Nickname</h2>
+<p>
+    {{ nickname}}
+</p>
+<input type="text" (keyup.enter)="setNickName(nicknameInput)" #nicknameInput/>
