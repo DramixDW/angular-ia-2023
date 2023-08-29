@@ -9,6 +9,7 @@ import { HighlightDirective } from './highlight.directive';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { CoffeeDirective } from './coffee.directive';
 import { SpongebobPipe } from './spongebob.pipe';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SpongebobPipe } from './spongebob.pipe';
     HighlightDirective,
     MoviesListComponent,
     CoffeeDirective,
-    SpongebobPipe
+    SpongebobPipe,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
