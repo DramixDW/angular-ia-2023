@@ -1,3 +1,26 @@
 <app-favorite [favorite]="true"></app-favorite>
 <app-favorite [favorite]="false"></app-favorite>
 <app-favorite [favorite]="true" (updateFavorite)="updateFavorite($event)"></app-favorite>
+<app-post-card>
+    <p>
+        Du texte
+    </p>
+</app-post-card>
+<app-post-card>
+    <app-favorite></app-favorite>
+    <ng-container class="footer">
+        Footer
+    </ng-container>
+</app-post-card>
+
+{{openZippyCount}} Zippy ouvert
+<app-zippy [isOpen]="false" (stateToggled)="updateZippyCount($event)">
+    <div>
+        <p>
+            Du texte bidon
+        </p>
+        <footer>
+            Un joli footer
+        </footer>
+    </div>    
+</app-zippy>

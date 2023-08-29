@@ -1,0 +1,10 @@
+<div>
+    <div class="titleDiv" (click)="toggleIsOpen()">
+        Title
+    </div>
+    <!-- ngIf et hidden fonctionne aussi -->
+    <div *ngIf="isOpen">
+        <!-- Comme ça, je peux lui passer autre chose que du texte -->
+        <ng-content></ng-content>
+    </div>
+</div>
