@@ -1,0 +1,29 @@
+<h2>
+    Formulaire d'ajout de cours
+</h2>
+<form #form="ngForm">
+    <div>
+        <label for="intitule">Intitulé</label>
+        <input required minlength="5" ngModel #intitule="ngModel" type="text" name="intitule" id="intitule">
+    </div>
+    <div *ngIf="intitule.invalid">
+        {{ intitule.errors | json}}
+    </div>
+    <div>
+        <label for="category">Catégorie</label>
+        <select ngModel name="category" id="category">
+            <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <textarea [maxlength]="descriptionMaxLength" ngModel #description="ngModel" name="description" id="description"></textarea>
+    </div>
+    <div>
+         Il vous reste {{ descriptionMaxLength - description.value.length }} charactères avant d'exploser
+    </div>
+</form>
+{{form.value | json}}
+<p>
+    Mon formulaire est valide: {{form.valid}}
+</p>
