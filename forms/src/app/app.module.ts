@@ -3,18 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TemplateFormsComponent } from './components/forms/template-forms/template-forms.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './components/forms/course-form/course-form.component';
+import { ReactiveFormComponent } from './components/forms/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateFormsComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
