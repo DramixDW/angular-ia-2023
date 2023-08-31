@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "isSeen": false
+    },
+    {
+      "id": 2,
+      "title": "Créer un post à la main",
+      "author": "dramix",
+      "isSeen": true
+    },
+    {
+      "title": "nouveau post",
+      "id": 3,
+      "isSeen": false
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

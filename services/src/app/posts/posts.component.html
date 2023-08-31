@@ -1,0 +1,12 @@
+<input #input type="text" name="postTitle" id="postTitle" (keyup.enter)="createPost(input.value)">
+<div>
+    <div *ngFor="let post of posts" [class.seen]="post.isSeen">
+        {{post.title}}
+        <button (click)="updatePost(post)">
+            isSeen toggle
+        </button>
+        <button (click)="deletePost(post.id!)">
+            Delete post
+        </button>
+    </div>
+</div>
