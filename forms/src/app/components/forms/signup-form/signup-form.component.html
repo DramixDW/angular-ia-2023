@@ -1,0 +1,38 @@
+<form [formGroup]="form">
+    <div>
+        <label for="username">Pseudo</label>
+        <input type="text" formControlName="username" id="username">
+    </div>
+    <div *ngIf="Username?.invalid">
+        <p>
+            {{ Username?.errors | json }}
+        </p>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" id="email">
+        <p *ngIf="Email?.pending">
+            Loading....
+        </p>
+        <div *ngIf="Email?.invalid">
+            <p>
+                {{ Email?.errors | json }}
+            </p>
+        </div>
+    </div>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="text" formControlName="password" id="password">
+        <div *ngIf="Password?.invalid">
+            <p>
+                {{ Password?.errors | json }}
+            </p>
+        </div>
+        <div *ngIf="form?.invalid">
+            <p>
+                {{ form.errors | json }}
+            </p>
+        </div>
+    </div>
+    {{ form.value | json}}
+</form>

@@ -6,13 +6,15 @@ import { TemplateFormsComponent } from './components/forms/template-forms/templa
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './components/forms/course-form/course-form.component';
 import { ReactiveFormComponent } from './components/forms/reactive-form/reactive-form.component';
+import { SignupFormComponent } from './components/forms/signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateFormsComponent,
     CourseFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
