@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ResourceService } from './resource.service';
 
 export interface Post {
   title: string,
@@ -11,27 +12,10 @@ export interface Post {
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService {
+export class PostsService  extends  ResourceService<Post> {
   baseUrl = 'http://localhost:3000/posts';
-  constructor(private http: HttpClient) { 
-  }
 
-  getAll() {
-    // on peut typer l'argument reçu par la callback subscribe
-    // grâce au générique qu'on peut configurer sur la fonction get du service
-    // http
-    return this.http.get<Post[]>(this.baseUrl)
-  }
-
-  create(body: Post) {
-    return this.http.post(this.baseUrl, body);
-  }
-
-  update(body: Partial<Post>, id: number) {
-    return this.http.patch(this.baseUrl + '/' + id, body)
-  }
-
-  delete(id: number) {
-    return this.http.delete(this.baseUrl + '/' + id)
+  constructor(http: HttpClient) {
+    super(http);
   }
 }

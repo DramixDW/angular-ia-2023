@@ -1,0 +1,9 @@
+a {
+    padding: 1em;
+}
+
+.active {
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
