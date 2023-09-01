@@ -1,0 +1,20 @@
+<h3>
+    Citations
+</h3>
+<ul>
+    <li *ngFor="let citation of citations">
+        {{ citation.citation }}
+        <button type="button" (click)="deleteCitation(citation.id!)">
+            X
+        </button>
+    </li>
+</ul>
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <div>
+        <label for="citation">Citation</label>
+        <input required ngModel type="text" name="citation" id="citation">
+    </div>
+    <button [disabled]="form.invalid" type="submit">
+        Submit
+    </button>
+</form>

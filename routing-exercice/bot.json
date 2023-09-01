@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "André",
+      "lastName": "Michel",
+      "email": "romain@triptyk.eu"
+    }
+  ],
+  "citations": [
+    {
+      "id": 1,
+      "citation": "Je t'ai rendu mulet",
+      "author": "le formateur"
+    }
+  ]
+}

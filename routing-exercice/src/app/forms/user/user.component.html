@@ -1,0 +1,17 @@
+<form #form="ngForm" (ngSubmit)="submit()">
+    <div>
+        <label for="firstName">Prénom</label>
+        <input [(ngModel)]="user.firstName" required type="text" name="firstName" id="firstName">
+    </div>
+    <div>
+        <label for="lastName">Nom</label>
+        <input [(ngModel)]="user.lastName" required type="text" name="lastName" id="lastName">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input [(ngModel)]="user.email" required type="text" name="email" id="email">
+    </div>
+    <button [disabled]="form.invalid" type="submit">
+        Submit
+    </button>
+</form>
